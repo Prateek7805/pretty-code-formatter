@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Navbar from './components/Navbar/Navbar';
+import CodeEditor from './components/CodeEditor/CodeEditor';
+import CodeWindow from './components/CodeWindow/CodeWindow';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar/>
+      <div className='row g-0'>
+        <div className='col-6 left-pane'>
+        <CodeEditor/>
+        </div>
+        <div className='col-6 right-pane'>
+          <CodeWindow/>
+          </div>
+      </div>
     </div>
   );
 }

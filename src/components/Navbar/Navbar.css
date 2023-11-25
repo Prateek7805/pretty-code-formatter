@@ -1,0 +1,18 @@
+.navbar-custom{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    border-bottom: 1px solid var(--accent);
+}
+.nav-title{
+    color: var(--text);
+    font-weight: 400;
+    font-size: 28px;
+    margin: 0;
+}
+.nav-logo{
+    width: 28px;
+    height: 28px;
+    fill: var(--text);
+}

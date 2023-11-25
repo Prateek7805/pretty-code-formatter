@@ -1,0 +1,64 @@
+:root {
+    --sw-var-width: 40px;
+    --sw-var-height: 20px;
+    --sw-var-thumb-dia: calc(var(--sw-var-height)*0.8);
+    --sw-var-thumb-pad: calc(var(--sw-var-height)*0.1);
+    --sw-var-translateX: calc(var(--sw-var-width) - var(--sw-var-thumb-dia) - (var(--sw-var-height)*0.2));
+
+    --c-sw-var-on: #f6f8fa;
+    --c-sw-var-off: #24292E;
+    --c-sw-var-thumb-off: #f6f8fa;
+    --c-sw-var-thumb-on: #24292E;
+}
+
+.sw-p-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: var(--sw-var-width);
+    height: var(--sw-var-height);
+}
+.loading{
+    opacity: 0.8;
+}
+.switch input {
+    display: none;
+}
+
+.check {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: calc(var(--sw-var-height));
+    background-color: var(--c-sw-var-off);
+    transition: left 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+
+}
+
+.check::before {
+    position: absolute;
+    content: "";
+    height: var(--sw-var-thumb-dia);
+    width: var(--sw-var-thumb-dia);
+    left: var(--sw-var-thumb-pad);
+    bottom: var(--sw-var-thumb-pad);
+    border-radius: 50%;
+    background-color: var(--c-sw-var-thumb-off);
+    transition: left 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+input:checked+.check {
+    background-color: var(--c-sw-var-on);
+}
+
+input:checked+.check::before {
+    transform: translateX(var(--sw-var-translateX));
+    background-color: var(--c-sw-var-thumb-on);
+}
