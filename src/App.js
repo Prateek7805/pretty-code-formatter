@@ -9,25 +9,25 @@ import { CodeData } from './components/Contexts/PageContext';
 
 
 function App() {
-  const {setCode} = useContext(CodeData);
-  useEffect(()=>{ 
+  const { setCode } = useContext(CodeData);
+  useEffect(() => {
     const language = localStorage.getItem('language') || '';
-    setCode((prev)=>({
+    setCode((prev) => ({
       ...prev,
-      language : language
+      language: language
     }));
-  },[setCode]);
+  }, [setCode]);
   return (
     <div className="App">
-    <AlertModal/>
-      <Navbar/>
-      <div className='row g-0'>
-        <div className='col-6 left-pane'>
-        <CodeEditor/>
+      <AlertModal />
+      <Navbar />
+      <div className='pane-wrapper flex-column flex-md-row'>
+        <div className='col-12 col-md-6'>
+          <CodeEditor />
         </div>
-        <div className='col-6 right-pane'>
-          <CodeWindow/>
-          </div>
+        <div className='col-12 col-md-6'>
+          <CodeWindow />
+        </div>
       </div>
     </div>
   );

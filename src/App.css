@@ -5,9 +5,10 @@
   --secondary: #74c2f6;
   --accent: #f4d262;
   --codeBg: #FFFFFF;
-  --sc-track-color : #323236;
-  --sc-track-hover-color : #525357;
+  --sc-track-color: #323236;
+  --sc-track-hover-color: #525357;
 }
+
 :root[data-theme="dark"] {
   --text: #ebf9f2;
   --background: #24292E;
@@ -15,13 +16,15 @@
   --secondary: #09578b;
   --accent: #9d7b0b;
   --codeBg: #1E1E1E;
-  --sc-track-color : #444654;
-  --sc-track-hover-color : #797a85;
+  --sc-track-color: #444654;
+  --sc-track-hover-color: #797a85;
 }
-:root{
-  --sc-width : 10px;
+
+:root {
+  --sc-width: 10px;
   --sc-border-radius: 10px;
 }
+
 .App {
   display: flex;
   flex-direction: column;
@@ -30,7 +33,7 @@
   background-color: var(--background);
 }
 
-.co{
+.co {
   outline: solid 2px green;
 }
 
@@ -40,10 +43,8 @@
   appearance: none;
 }
 
-
-.left-pane{
-  padding: 10px 10px 0 10px !important;
-}
-.right-pane{
-  padding: 10px 10px 0 0 !important;
+.pane-wrapper {
+  display: flex;
+  padding: 10px;
+  gap: 10px;
 }

@@ -78,11 +78,11 @@ const getProps = (language) => {
 }
 
 export default async function formatCode(unformattedCode, language) {
-        const { parser, plugins } = getProps(language);
-        if (parser === 'XML') {
-            const formattedCode = xmlFormatter(unformattedCode);
-            return formattedCode;
-        }
-        const formattedCode = await prettier.format(unformattedCode, { parser, plugins: plugins });
+    const { parser, plugins } = getProps(language);
+    if (parser === 'XML') {
+        const formattedCode = xmlFormatter(unformattedCode);
         return formattedCode;
+    }
+    const formattedCode = await prettier.format(unformattedCode, { parser, plugins: plugins });
+    return formattedCode;
 };
