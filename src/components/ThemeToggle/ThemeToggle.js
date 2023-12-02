@@ -9,7 +9,7 @@ export default function ThemeToggle(){
     const theme = useTheme();
 
     const handleThemeToggle = (themeMode) => {
-        console.log(themeMode)
+        //console.log(themeMode)
         setMode(themeMode);
     }
 

@@ -1,0 +1,35 @@
+.modal-body{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    width: 400;
+    padding: 20px;
+    background-color: var(--background);
+    gap: 10px;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+.modal-title{
+    padding:0;
+    color: var(--text);
+    font-family: 'fira-code', monospace, sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+.modal-text{
+    padding:0;
+    color: var(--text);
+    font-family: 'fira-code', monospace, sans-serif;
+    font-size: 15px;
+    text-align: center;
+}
+.modal-close{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}

@@ -1,6 +1,6 @@
 {
-  "short_name": "Auto Format",
-  "name": "Auto Code Formatter",
+  "short_name": "Pretty code",
+  "name": "Pretty Code Formatter",
   "icons": [
     {
       "src": "favicon.svg",

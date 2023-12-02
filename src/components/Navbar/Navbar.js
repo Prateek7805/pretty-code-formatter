@@ -3,7 +3,6 @@ import './Navbar.css';
 import Flower from '../Icons/Flower/Flower';
 import ThemeToggle from '../ThemeToggle/ThemeToggle';
 import LanguageSelector from '../LanguageSelector/LanguageSelector';
-import MagicSwitch from '../Switch/MagicSwitch/MagicSwitch';
 import RunButton from '../Buttons/RunButton/RunButton';
 export default function Navbar(){
     return (
@@ -14,7 +13,6 @@ export default function Navbar(){
             </div>
             <div className='col-4 d-flex flex-row justify-content-end px-2 align-items-center gap-1'>
                 <RunButton/>
-                <MagicSwitch/>
                 <LanguageSelector/>
                 <ThemeToggle/>
             </div>

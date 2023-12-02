@@ -21,8 +21,6 @@
 :root{
   --sc-width : 10px;
   --sc-border-radius: 10px;
-  --sc-track-color : #444654;
-  --sc-track-hover-color : #797a85;
 }
 .App {
   display: flex;
@@ -36,7 +34,7 @@
   outline: solid 2px green;
 }
 
-body::-webkit-scrollbar {
+*::-webkit-scrollbar {
   width: 0;
   height: 0;
   appearance: none;

@@ -3,27 +3,42 @@ import './CodeWindow.css';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus, vs } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import 'highlight.js/styles/default.css'
-
-import { IconButton } from '@mui/material';
-import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import { useTheme } from '@emotion/react';
-import { CodeData } from '../Contexts/PageContext';
+import { CodeData, ModalData } from '../Contexts/PageContext';
+import CopyTextButton from '../Buttons/CopyTextButton/CopyTextButton';
 
 export default function CodeWindow(){
     const theme = useTheme();
     const {code} = useContext(CodeData);
+    const {setMData} = useContext(ModalData);
     const codeTheme = theme.palette.mode === "light"? vs : vscDarkPlus;
-    
+    const copyTextToClipBoard = async () => {
+        try {
+            const formattedCode = code.formatted;
+            if(formattedCode === '' || formattedCode === undefined){
+                return;
+            }
+            await navigator.clipboard.writeText(formattedCode);
+        }catch(error){
+            setMData(prev=>({
+                ...prev,
+                alertModal: {
+                    ...prev.alertModal,
+                    open: true,
+                    title: error.name,
+                    msg: error.message
+                }
+            }));
+        }
+    }
     return (
             <div className='codeblock-wrapper'>
-                <IconButton className='copy-btn' variant='outlined'>
-                    <ContentCopyIcon/>
-                </IconButton>
+                <CopyTextButton onClick={copyTextToClipBoard}/>
             <SyntaxHighlighter 
                 className='codeblock-window'
                 showLineNumbers={true}
-                language={code.language} 
-                style={codeTheme} 
+                language={code.hLang} 
+                style={codeTheme}
                 >
                 {code.formatted}
             </SyntaxHighlighter>
