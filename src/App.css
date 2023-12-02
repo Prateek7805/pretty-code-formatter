@@ -23,6 +23,8 @@
 :root {
   --sc-width: 10px;
   --sc-border-radius: 10px;
+  --pm-color: #6DB9EF;
+  --pm-visited-color: #0295fe;
 }
 
 .App {
@@ -54,9 +56,22 @@
   padding: 10px 10px 10px 0;
 }
 
+.footer{
+  display: flex;
+  padding: 0 0 0 10px;
+}
+.footer>p{
+  color: var(--text);
+}
+.footer>p>a{
+  text-decoration: none;
+  color: var(--pm-color);
+}
+.footer>p>a:visited{
+  color: var(--pm-visited-color);
+}
 @media(max-width: 768px){
   .pane-right{
     padding: 0 10px 10px 10px;
   }
-  
 }

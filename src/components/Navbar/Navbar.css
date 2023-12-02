@@ -22,7 +22,7 @@
     align-items: center;
     gap:5px;
 }
-@media(max-width: 767px){
+@media(max-width: 768px){
     /*small screens*/
     .nav-logo{
         width: 16px;

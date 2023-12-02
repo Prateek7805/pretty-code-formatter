@@ -29,6 +29,9 @@ function App() {
           <CodeWindow />
         </div>
       </div>
+      <div className='footer'>
+        <p>Made with ♥ by <a href="https://github.com/prateek7805" target="_blank" rel="noopener noreferrer">Prateek Mahajan</a></p>
+      </div>
     </div>
   );
 }
