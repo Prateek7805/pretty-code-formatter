@@ -16,3 +16,20 @@
     height: 28px;
     fill: var(--text);
 }
+.nav-controls{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap:5px;
+}
+@media(max-width: 767px){
+    /*small screens*/
+    .nav-logo{
+        width: 16px;
+        height: 16px;
+        fill: var(--text);
+    }
+    .nav-title{
+        display: none;
+    }
+}

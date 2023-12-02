@@ -22,10 +22,10 @@ function App() {
       <AlertModal />
       <Navbar />
       <div className='pane-wrapper flex-column flex-md-row'>
-        <div className='col-12 col-md-6'>
+        <div className='col-12 col-md-6 pane-left'>
           <CodeEditor />
         </div>
-        <div className='col-12 col-md-6'>
+        <div className='col-12 col-md-6 pane-right'>
           <CodeWindow />
         </div>
       </div>

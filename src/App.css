@@ -45,6 +45,18 @@
 
 .pane-wrapper {
   display: flex;
-  padding: 10px;
-  gap: 10px;
+}
+
+.pane-left{
+  padding: 10px 10px 10px 10px;
+}
+.pane-right{
+  padding: 10px 10px 10px 0;
+}
+
+@media(max-width: 768px){
+  .pane-right{
+    padding: 0 10px 10px 10px;
+  }
+  
 }
