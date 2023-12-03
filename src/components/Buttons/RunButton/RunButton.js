@@ -3,14 +3,20 @@ import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import { IconButton, Tooltip } from '@mui/material';
 import { useContext } from 'react';
 import { CodeData, ModalData } from '../../Contexts/PageContext';
-import formatCode from '../../../API/FormatCode/FormatCode';
+import formatCode, { langParseMap } from '../../../API/FormatCode/FormatCode';
 export default function RunButton(){
     const {code, setCode} = useContext(CodeData);
     const {setMData} = useContext(ModalData);
     const handleFormatting = async () =>{
         try{
-            const formattedCode = await formatCode(code.unformatted, code.language);
-            setCode(prev=>({...prev, formatted: formattedCode}));
+            const language = code.language;
+            const formattedCode = await formatCode(code.unformatted, language);
+            const index = langParseMap.findIndex(item=>item.language === language);
+            if(index === -1){
+                throw new Error('Highlighted language not found: unsupported language')
+            }
+            const highlighted = langParseMap[index].highlighted;
+            setCode(prev=>({...prev, formatted: formattedCode, highlighted}));
         }catch(error){
             
             setMData(prev=>({
@@ -25,7 +31,7 @@ export default function RunButton(){
         }
     }
     return (
-            <IconButton className='run-button' onClick={handleFormatting}>
+            <IconButton onClick={handleFormatting}>
                 <Tooltip title='Beautify'>
 
                 <PlayArrowIcon/>

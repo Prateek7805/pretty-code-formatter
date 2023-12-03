@@ -37,7 +37,7 @@ export default function CodeWindow(){
             <SyntaxHighlighter 
                 className='codeblock-window'
                 showLineNumbers={true}
-                language={code.hLang} 
+                language={code.highlighted.toLowerCase()} 
                 style={codeTheme}
                 >
                 {code.formatted}

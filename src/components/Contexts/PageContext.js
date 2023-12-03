@@ -6,7 +6,8 @@ export const ThemeData = createContext('light');
 export const CodeData = createContext({
     unformatted: '',
     formatted: '',
-    language: ''
+    language: '',
+    highlighted: ''
 });
 export const ModalData = createContext({
     alertModal: {
@@ -21,7 +22,8 @@ export default function PageContext({ children }) {
     const [code, setCode] = useState({
         unformatted: '',
         formatted: '',
-        language: ''
+        language: '',
+        highlighted: ''
     });
     const [mData, setMData] = useState({
         alertModal: {

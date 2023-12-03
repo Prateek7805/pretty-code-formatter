@@ -4,6 +4,7 @@ import Flower from '../Icons/Flower/Flower';
 import ThemeToggle from '../ThemeToggle/ThemeToggle';
 import LanguageSelector from '../LanguageSelector/LanguageSelector';
 import RunButton from '../Buttons/RunButton/RunButton';
+import ExampleButton from '../Buttons/ExampleButton/ExampleButton';
 export default function Navbar() {
     return (
         <div className="row g-0 navbar-custom">
@@ -13,6 +14,7 @@ export default function Navbar() {
             </div>
             <div className='col-4 d-flex flex-row justify-content-end px-2 align-items-center gap-1'>
                 <RunButton />
+                <ExampleButton/>
                 <LanguageSelector />
                 <ThemeToggle />
             </div>
