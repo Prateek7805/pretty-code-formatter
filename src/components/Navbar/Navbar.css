@@ -6,6 +6,10 @@
     border-bottom: 1px solid var(--accent);
 }
 .nav-title{
+    display: flex;
+    flex-direction: row;
+}
+.nav-title>p{
     color: var(--text);
     font-weight: 400;
     font-size: 28px;
@@ -22,8 +26,21 @@
     align-items: center;
     gap:5px;
 }
-@media(max-width: 768px){
+@media(min-width: 381px) and (max-width: 768px){
     /*small screens*/
+    .nav-logo{
+        width: 16px;
+        height: 16px;
+        fill: var(--text);
+    }
+    .nav-title{
+        flex-direction: column;
+    }
+    .nav-title>p{
+        font-size: 18px;
+    }
+}
+@media(max-width: 380px){
     .nav-logo{
         width: 16px;
         height: 16px;

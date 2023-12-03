@@ -10,7 +10,11 @@ export default function Navbar() {
         <div className="row g-0 navbar-custom">
             <div className='col-8 d-flex flex-row gap-2 px-3 px-md-5 align-items-center'>
                 <Flower />
-                <p className='nav-title'>Pretty Code</p>
+                <div className='nav-title'>
+                    <p>Pretty</p>
+                    <p className='d-none d-md-flex'>&nbsp;</p>
+                    <p>Code</p>
+                </div>
             </div>
             <div className='col-4 d-flex flex-row justify-content-end px-2 align-items-center gap-1'>
                 <RunButton />

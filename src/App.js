@@ -17,9 +17,10 @@ function App() {
       language: language
     }));
   }, [setCode]);
+
   return (
     <div className="App">
-      <AlertModal />
+      <AlertModal/>
       <Navbar />
       <div className='pane-wrapper flex-column flex-md-row'>
         <div className='col-12 col-md-6 pane-left'>
