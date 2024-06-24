@@ -19,5 +19,6 @@ A client side code formatter/beautifier created with
 * Less
 * JSON
 * XML
-* Graphql
+* Graphql  
+
 Demo @ [Pretty Code](https://pretty-code.netlify.app/)
