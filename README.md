@@ -20,3 +20,4 @@ A client side code formatter/beautifier created with
 * JSON
 * XML
 * Graphql
+Demo @ [Pretty Code](https://pretty-code.netlify.app/)
